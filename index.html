@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<!-- INSTRUCTIONS:
+		   1. put images in images/ folder
+		      - they must be jpgs and have extension .jpg
+		      - the first one should be image0.jpg and count up from there
+		   2. set number_of_images below to correct number
+		   3. profit
+		-->
+
+		<title>pony randomizer</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<style>
+			body {
+				color: #000;
+				background-color: lightblue;
+			}
+			.pony-container {
+				text-align: center;
+			}
+			img#pony {
+				max-width: 500px;
+				max-height: 500px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function getRandomImage() {
+				/* CHANGE THIS IF YOU ADD MORE IMAGES */
+				var number_of_images = 4;
+
+				var image_number = Math.floor( Math.random() * number_of_images );
+				return "images/image" + image_number + ".jpg";
+			}
+
+			$(document).ready( function() {
+				$( "#pony" ).attr( 'src', getRandomImage() );
+			} );
+		</script>
+
+
+
+	</head>
+	<body>
+		<div class='pony-container'>
+			<h1>pony randomizer</h1>
+
+			<a href="javascript:window.location.reload(true)"><img id="pony" src="images/image0.jpg" /></a>
+
+			<div><a href="javascript:window.location.reload(true)">get new pony</a></div>
+		</div>
+	</body>
+</html>
