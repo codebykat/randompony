@@ -9,8 +9,6 @@
 		-->
 
 		<title>pony randomizer</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 		<style>
 			body {
 				color: #000;
@@ -24,6 +22,15 @@
 				max-height: 500px;
 			}
 		</style>
+	</head>
+	<body>
+		<div class='pony-container'>
+			<h1>pony randomizer</h1>
+
+			<a href="javascript:window.location.reload(true)"><img id="pony" src="images/image0.jpg" /></a>
+
+			<div><a href="javascript:window.location.reload(true)">get new pony</a></div>
+		</div>
 
 		<script type="text/javascript">
 			function getRandomImage() {
@@ -34,21 +41,7 @@
 				return "images/image" + image_number + ".jpg";
 			}
 
-			$(document).ready( function() {
-				$( "#pony" ).attr( 'src', getRandomImage() );
-			} );
+			document.getElementById( 'pony' ).src = getRandomImage();
 		</script>
-
-
-
-	</head>
-	<body>
-		<div class='pony-container'>
-			<h1>pony randomizer</h1>
-
-			<a href="javascript:window.location.reload(true)"><img id="pony" src="images/image0.jpg" /></a>
-
-			<div><a href="javascript:window.location.reload(true)">get new pony</a></div>
-		</div>
 	</body>
 </html>
