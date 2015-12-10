@@ -1,0 +1,14 @@
+body {
+	color: #000;
+	background-color: lightblue;
+}
+.container {
+	text-align: center;
+}
+.pony-container {
+	height: 500px;
+}
+img#pony {
+	max-width: 500px;
+	max-height: 500px;
+}
